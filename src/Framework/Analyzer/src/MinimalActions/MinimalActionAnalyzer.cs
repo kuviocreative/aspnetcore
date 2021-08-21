@@ -16,6 +16,7 @@ public partial class MinimalActionAnalyzer : DiagnosticAnalyzer
     public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create(new[]
     {
         DiagnosticDescriptors.DoNotUseModelBindingAttributesOnMinimalActionParameters,
+        DiagnosticDescriptors.DetectMisplacedLambdaAttribute
     });
 
     public override void Initialize(AnalysisContext context)
@@ -35,7 +36,7 @@ public partial class MinimalActionAnalyzer : DiagnosticAnalyzer
             {
                 var invocation = (IInvocationOperation)operationAnalysisContext.Operation;
                 var targetMethod = invocation.TargetMethod;
-                if (IsMapActionInvocation(wellKnownTypes, invocation, targetMethod))
+                if (IsNotMapActionInvocation(wellKnownTypes, invocation, targetMethod))
                 {
                     return;
                 }
@@ -50,6 +51,7 @@ public partial class MinimalActionAnalyzer : DiagnosticAnalyzer
                 {
                     var lambda = ((IAnonymousFunctionOperation)delegateCreation.Target);
                     DisallowMvcBindArgumentsOnParameters(in operationAnalysisContext, wellKnownTypes, invocation, lambda.Symbol);
+                    DetectMisplacedLambdaAttribute(in operationAnalysisContext, invocation, lambda);
                 }
                 else if (delegateCreation.Target.Kind == OperationKind.MethodReference)
                 {
@@ -60,7 +62,7 @@ public partial class MinimalActionAnalyzer : DiagnosticAnalyzer
         });
     }
 
-    private static bool IsMapActionInvocation(
+    private static bool IsNotMapActionInvocation(
         WellKnownTypes wellKnownTypes,
         IInvocationOperation invocation,
         IMethodSymbol targetMethod)

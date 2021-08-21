@@ -16,5 +16,14 @@ namespace Microsoft.AspNetCore.Analyzers.MinimalActions
             DiagnosticSeverity.Warning,
             isEnabledByDefault: true,
             helpLinkUri: "https://aka.ms/aspnet/analyzers");
+
+        internal static readonly DiagnosticDescriptor DetectMisplacedLambdaAttribute = new(
+            "ASP0004",
+            "Do not place attribute on invoked method",
+            "{0} should be placed on the delegate instead of {1}",
+            "Usage",
+            DiagnosticSeverity.Warning,
+            isEnabledByDefault: true,
+            helpLinkUri: "https://aka.ms/aspnet/analyzers");
     }
 }
