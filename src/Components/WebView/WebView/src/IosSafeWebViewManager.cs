@@ -42,7 +42,7 @@ namespace Microsoft.AspNetCore.Components.WebView
         /// <param name="appBaseUri">The base URI for the application. Since this is a webview, the base URI is typically on a private origin such as http://0.0.0.0/ or app://example/</param>
         /// <param name="fileProvider">Provides static content to the webview.</param>
         /// <param name="hostPageRelativePath">Path to the host page within the <paramref name="fileProvider"/>.</param>
-        public WebViewManager(IServiceProvider provider, Dispatcher dispatcher, Uri appBaseUri, IFileProvider fileProvider, string hostPageRelativePath)
+        public IosSafeWebViewManager(IServiceProvider provider, Dispatcher dispatcher, Uri appBaseUri, IFileProvider fileProvider, string hostPageRelativePath)
         {
             _provider = provider ?? throw new ArgumentNullException(nameof(provider));
             _dispatcher = dispatcher ?? throw new ArgumentNullException(nameof(dispatcher));

@@ -1,4 +1,4 @@
-﻿#nullable enable
+#nullable enable
 Microsoft.AspNetCore.Components.WebView.WebViewManager
 Microsoft.AspNetCore.Components.WebView.WebViewManager.AddRootComponentAsync(System.Type! componentType, string! selector, Microsoft.AspNetCore.Components.ParameterView parameters) -> System.Threading.Tasks.Task!
 Microsoft.AspNetCore.Components.WebView.WebViewManager.Dispatcher.get -> Microsoft.AspNetCore.Components.Dispatcher!
@@ -14,3 +14,17 @@ abstract Microsoft.AspNetCore.Components.WebView.WebViewManager.NavigateCore(Sys
 abstract Microsoft.AspNetCore.Components.WebView.WebViewManager.SendMessage(string! message) -> void
 static Microsoft.Extensions.DependencyInjection.ComponentsWebViewServiceCollectionExtensions.AddBlazorWebView(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
 virtual Microsoft.AspNetCore.Components.WebView.WebViewManager.DisposeAsyncCore() -> System.Threading.Tasks.ValueTask
+
+Microsoft.AspNetCore.Components.WebView.IosSafeWebViewManager
+Microsoft.AspNetCore.Components.WebView.IosSafeWebViewManager.AddRootComponentAsync(System.Type! componentType, string! selector, Microsoft.AspNetCore.Components.ParameterView parameters) -> System.Threading.Tasks.Task!
+Microsoft.AspNetCore.Components.WebView.IosSafeWebViewManager.Dispatcher.get -> Microsoft.AspNetCore.Components.Dispatcher!
+Microsoft.AspNetCore.Components.WebView.IosSafeWebViewManager.DisposeAsync() -> System.Threading.Tasks.ValueTask
+Microsoft.AspNetCore.Components.WebView.IosSafeWebViewManager.JSComponentConfiguration.get -> Microsoft.AspNetCore.Components.Web.JSComponentConfigurationStore!
+Microsoft.AspNetCore.Components.WebView.IosSafeWebViewManager.MessageReceived(System.Uri! sourceUri, string! message) -> void
+Microsoft.AspNetCore.Components.WebView.IosSafeWebViewManager.Navigate(string! url) -> void
+Microsoft.AspNetCore.Components.WebView.IosSafeWebViewManager.RemoveRootComponentAsync(string! selector) -> System.Threading.Tasks.Task!
+Microsoft.AspNetCore.Components.WebView.IosSafeWebViewManager.TryGetResponseContent(string! uri, bool allowFallbackOnHostPage, out int statusCode, out string! statusMessage, out System.IO.Stream! content, out System.Collections.Generic.IDictionary<string!, string!>! headers) -> bool
+Microsoft.AspNetCore.Components.WebView.IosSafeWebViewManager.IosSafeWebViewManager(System.IServiceProvider! provider, Microsoft.AspNetCore.Components.Dispatcher! dispatcher, System.Uri! appBaseUri, Microsoft.Extensions.FileProviders.IFileProvider! fileProvider, string! hostPageRelativePath) -> void
+abstract Microsoft.AspNetCore.Components.WebView.IosSafeWebViewManager.NavigateCore(System.Uri! absoluteUri) -> void
+abstract Microsoft.AspNetCore.Components.WebView.IosSafeWebViewManager.SendMessage(string! message) -> void
+virtual Microsoft.AspNetCore.Components.WebView.IosSafeWebViewManager.DisposeAsyncCore() -> System.Threading.Tasks.ValueTask
