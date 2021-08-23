@@ -61,7 +61,7 @@ namespace Microsoft.AspNetCore.Components.WebView
             var webRootFileProvider = systemProvider;
 
             var additionalFiles = StaticWebAssetsReader.Parse(manifest)
-                .Select(cr => new StaticWebAssetsFileProvider(cr.BasePath, cr.Path))
+                .Select(cr => new StaticWebAssetsFileProvider(systemProvider, cr.BasePath, cr.Path))
                 .OfType<IFileProvider>() // Upcast so we can insert on the resulting list.
                 .ToList();
 
@@ -160,13 +160,13 @@ namespace Microsoft.AspNetCore.Components.WebView
                 StringComparison.OrdinalIgnoreCase :
                 StringComparison.Ordinal;
 
-            public StaticWebAssetsFileProvider(string pathPrefix, string contentRoot)
+            public StaticWebAssetsFileProvider(IFileProvider provider, string basePath, string pathPrefix)
             {
                 BasePath = NormalizePath(pathPrefix);
-                InnerProvider = new PhysicalFileProvider(contentRoot);
+                InnerProvider = provider;
             }
 
-            public PhysicalFileProvider InnerProvider { get; }
+            public IFileProvider InnerProvider { get; }
 
             public PathString BasePath { get; }
 
