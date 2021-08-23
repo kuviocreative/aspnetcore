@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31320.298
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "eng", "eng", "{C28A32F6-8314-412E-9F3B-CBD31C23E878}"
 EndProject
@@ -1620,9 +1620,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PhotinoPlatform", "PhotinoP
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "testassets", "testassets", "{3EC71A0E-6515-4A5A-B759-F0BCF1BCFC56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotinoTestApp", "src\Components\WebView\Samples\PhotinoPlatform\testassets\PhotinoTestApp\PhotinoTestApp.csproj", "{558C46DE-DE16-41D5-8DB7-D6D748E32977}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhotinoTestApp", "src\Components\WebView\Samples\PhotinoPlatform\testassets\PhotinoTestApp\PhotinoTestApp.csproj", "{558C46DE-DE16-41D5-8DB7-D6D748E32977}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.AspNetCore.Components.WebView.Photino", "src\Components\WebView\Samples\PhotinoPlatform\src\Microsoft.AspNetCore.Components.WebView.Photino.csproj", "{B1AA24A4-5E02-4DC1-B57F-6EB03F91E4DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Components.WebView.Photino", "src\Components\WebView\Samples\PhotinoPlatform\src\Microsoft.AspNetCore.Components.WebView.Photino.csproj", "{B1AA24A4-5E02-4DC1-B57F-6EB03F91E4DD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleWebSiteWithWebApplicationBuilderException", "src\Mvc\test\WebSites\SimpleWebSiteWithWebApplicationBuilderException\SimpleWebSiteWithWebApplicationBuilderException.csproj", "{5C641396-7E92-4F5C-A5A1-B4CDF480539B}"
 EndProject
@@ -1637,6 +1637,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.AspNetCore.Razor.Internal.SourceGenerator.Transport", "src\Razor\Microsoft.AspNetCore.Razor.Internal.SourceGenerator.Transport\Microsoft.AspNetCore.Razor.Internal.SourceGenerator.Transport.csproj", "{247E7B6F-FBA2-41A9-BA03-C7C4DF28091C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpClientApp", "src\Servers\Kestrel\samples\HttpClientApp\HttpClientApp.csproj", "{514726D2-3D2E-44C1-B056-163E37DE3E8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.AspNetCore.Components.WebView.IosSafe", "Microsoft.AspNetCore.Components.WebView.IosSafe\Microsoft.AspNetCore.Components.WebView.IosSafe.csproj", "{ADE4D41E-4311-4C31-AA07-1886056F2271}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -7817,6 +7819,18 @@ Global
 		{514726D2-3D2E-44C1-B056-163E37DE3E8B}.Release|x64.Build.0 = Release|Any CPU
 		{514726D2-3D2E-44C1-B056-163E37DE3E8B}.Release|x86.ActiveCfg = Release|Any CPU
 		{514726D2-3D2E-44C1-B056-163E37DE3E8B}.Release|x86.Build.0 = Release|Any CPU
+		{ADE4D41E-4311-4C31-AA07-1886056F2271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADE4D41E-4311-4C31-AA07-1886056F2271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADE4D41E-4311-4C31-AA07-1886056F2271}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{ADE4D41E-4311-4C31-AA07-1886056F2271}.Debug|x64.Build.0 = Debug|Any CPU
+		{ADE4D41E-4311-4C31-AA07-1886056F2271}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ADE4D41E-4311-4C31-AA07-1886056F2271}.Debug|x86.Build.0 = Debug|Any CPU
+		{ADE4D41E-4311-4C31-AA07-1886056F2271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE4D41E-4311-4C31-AA07-1886056F2271}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADE4D41E-4311-4C31-AA07-1886056F2271}.Release|x64.ActiveCfg = Release|Any CPU
+		{ADE4D41E-4311-4C31-AA07-1886056F2271}.Release|x64.Build.0 = Release|Any CPU
+		{ADE4D41E-4311-4C31-AA07-1886056F2271}.Release|x86.ActiveCfg = Release|Any CPU
+		{ADE4D41E-4311-4C31-AA07-1886056F2271}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -8628,7 +8642,7 @@ Global
 		{17459B97-1AA3-4154-83D3-C6BDC9FA3F85} = {022B4B80-E813-4256-8034-11A68146F4EF}
 		{247E7B6F-FBA2-41A9-BA03-C7C4DF28091C} = {B27FBAC2-ADA3-4A05-B232-64011B6B2DA3}
 		{514726D2-3D2E-44C1-B056-163E37DE3E8B} = {7B976D8F-EA31-4C0B-97BD-DFD9B3CC86FB}
-		{B2ACFA01-3046-4A32-B90A-F9537F51BF85} = {6126DCE4-9692-4EE2-B240-C65743572995}
+		{ADE4D41E-4311-4C31-AA07-1886056F2271} = {C445B129-0A4D-41F5-8347-6534B6B12303}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E8720B3-DBDD-498C-B383-2CC32A054E8F}

@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.JSInterop;
 
-namespace Microsoft.AspNetCore.Components.WebView
+namespace Microsoft.AspNetCore.Components.WebView.IosSafe
 {
     /// <summary>
     /// Manages activities within a web view that hosts Blazor components. Platform authors

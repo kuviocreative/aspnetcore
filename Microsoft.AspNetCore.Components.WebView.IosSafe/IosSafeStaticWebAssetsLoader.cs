@@ -13,7 +13,7 @@ using System.Xml.Linq;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Primitives;
 
-namespace Microsoft.AspNetCore.Components.WebView
+namespace Microsoft.AspNetCore.Components.WebView.IosSafe
 {
     internal class IosSafeStaticWebAssetsLoader
     {

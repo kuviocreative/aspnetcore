@@ -1,0 +1,14 @@
+#nullable enable
+Microsoft.AspNetCore.Components.WebView.IosSafe.IosSafeWebViewManager
+Microsoft.AspNetCore.Components.WebView.IosSafe.IosSafeWebViewManager.AddRootComponentAsync(System.Type! componentType, string! selector, Microsoft.AspNetCore.Components.ParameterView parameters) -> System.Threading.Tasks.Task!
+Microsoft.AspNetCore.Components.WebView.IosSafe.IosSafeWebViewManager.Dispatcher.get -> Microsoft.AspNetCore.Components.Dispatcher!
+Microsoft.AspNetCore.Components.WebView.IosSafe.IosSafeWebViewManager.DisposeAsync() -> System.Threading.Tasks.ValueTask
+Microsoft.AspNetCore.Components.WebView.IosSafe.IosSafeWebViewManager.JSComponentConfiguration.get -> Microsoft.AspNetCore.Components.Web.JSComponentConfigurationStore!
+Microsoft.AspNetCore.Components.WebView.IosSafe.IosSafeWebViewManager.MessageReceived(System.Uri! sourceUri, string! message) -> void
+Microsoft.AspNetCore.Components.WebView.IosSafe.IosSafeWebViewManager.Navigate(string! url) -> void
+Microsoft.AspNetCore.Components.WebView.IosSafe.IosSafeWebViewManager.RemoveRootComponentAsync(string! selector) -> System.Threading.Tasks.Task!
+Microsoft.AspNetCore.Components.WebView.IosSafe.IosSafeWebViewManager.TryGetResponseContent(string! uri, bool allowFallbackOnHostPage, out int statusCode, out string! statusMessage, out System.IO.Stream! content, out System.Collections.Generic.IDictionary<string!, string!>! headers) -> bool
+Microsoft.AspNetCore.Components.WebView.IosSafe.IosSafeWebViewManager.IosSafeWebViewManager(System.IServiceProvider! provider, Microsoft.AspNetCore.Components.Dispatcher! dispatcher, System.Uri! appBaseUri, Microsoft.Extensions.FileProviders.IFileProvider! fileProvider, string! hostPageRelativePath) -> void
+abstract Microsoft.AspNetCore.Components.WebView.IosSafe.IosSafeWebViewManager.NavigateCore(System.Uri! absoluteUri) -> void
+abstract Microsoft.AspNetCore.Components.WebView.IosSafe.IosSafeWebViewManager.SendMessage(string! message) -> void
+virtual Microsoft.AspNetCore.Components.WebView.IosSafe.IosSafeWebViewManager.DisposeAsyncCore() -> System.Threading.Tasks.ValueTask
